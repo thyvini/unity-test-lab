@@ -39,11 +39,6 @@ public class Generator : MonoBehaviour
 
     private float Remap(float value, float from1, float to1, float from2, float to2)
     {
-        Debug.Log(value);
-        Debug.Log(from1);
-        Debug.Log(to1);
-        Debug.Log(from2);
-        Debug.Log(to2);
         return (value - from1) / (to1 - from1) * (to2 - from2) + from2;
     }
 }
