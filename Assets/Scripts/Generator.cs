@@ -13,7 +13,6 @@ public class Generator : MonoBehaviour
 
     private void Awake()
     {
-        var time = Time.deltaTime;
         _map = new GameObject[WIDTH][];
         for (int i = 0; i < WIDTH; i++)
         {
@@ -30,9 +29,6 @@ public class Generator : MonoBehaviour
                 _map[xWithoutOffset][zWithoutOffset] = Instantiate(_chunkModels[r], new Vector3(x, 0, z), Quaternion.identity);
             }
         }
-
-        var concluded = Time.deltaTime;
-        Debug.Log(concluded - time);
     }
 
     private int GetFromNoise(float x, float z)
