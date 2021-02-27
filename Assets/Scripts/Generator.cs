@@ -38,6 +38,8 @@ public class Generator : MonoBehaviour
 
         float noiseFromPosition = Mathf.PerlinNoise(xCoord, zCoord);
 
+        Debug.Log(noiseFromPosition);
+
         float remaped = Remap(noiseFromPosition, 0.0f, 1.0f, 0.0f, (float)_chunkModels.Length);
 
         return (int)Math.Floor(remaped);
